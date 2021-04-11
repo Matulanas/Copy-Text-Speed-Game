@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Section */
+header {
+    background-color: darkblue;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-title h1 {
+    letter-spacing: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* Intro Section */
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4A948F;
+    min-height: 100px;
+}
+    .intro p {
+        width: 35%;
+    } 
+
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Original text styles */
+.original-text {
+    background-color: #DCDCDC;
+    width: 35%;
+    margin: 10px;
+}
+    .original-text p {
+        padding: 10px;
+        margin: 0;
+        color: #000000;
+    }
+
+/* Text box styles */
+.text-box {
+    width: 35%;
+    margin: 0 auto;
+}
+textarea {
+    padding: 5px;
+    width: 100%;
+    resize: none;
+    border: 5px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Clock and button styles */
+.meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+    margin-top: 10px;
 }
+    .timer {
+        float: left;
+        font-size: 30px;
+        font-weight: 900;
+        color: #000000;
+    }
+    
+    .reset {
+        background-color: #FFFFFF;
+        border: 5px solid orange;
+        outline: none;
+        transition-duration: 0.3s;
+        padding: 10px;
+    }
+    .reset:hover {
+        background-color: orange;
+        color: #FFFFFF;
+        transition-duration: 0.3s;
+    }
