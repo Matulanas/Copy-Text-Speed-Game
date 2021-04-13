@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react';
 
-const GameBox = () => {
+const GameBox = (props) => {
     const originalText = 'Some text';
-    // let borderColor = '#4A948F';
-    // let usagePermission = false;
+
     const [usagePermission, setUsagePermission] = useState(false);
 
     const [borderColor, setBorderColor] = useState('#4A948F');
-
+    
     const [counterMicroSeconds, setCounterMicroSeconds] = useState(0);
     const [counterMilliSeconds, setCounterMilliSeconds] = useState(0);
     const [counterSeconds, setCounterSeconds] = useState(0);
     const [counterMinutes, setCounterMinutes] = useState(0);
     const [status, setStatus] = useState("paused");
 
+
     const [textAreaValue, setTextAreaValue] = useState('');
     let textEnteredLenght = textAreaValue.length;
     
-
     
     const timerStart = () => {
 
-        if (textEnteredLenght === 1) {
+        if (textEnteredLenght > 0 && textEnteredLenght < originalText.length) {
             setStatus("working");
+            
         }
     }
 
@@ -56,6 +56,9 @@ const GameBox = () => {
             stopTimers();
             setBorderColor('green');
             setUsagePermission(true);
+
+            props.childValue(counterMicroSeconds);
+
         } else {
             if (event.target.value === originalTextMatch) {
                 setBorderColor('blue');
@@ -75,6 +78,7 @@ const GameBox = () => {
         setCounterSeconds(0);
         setCounterMinutes(0);
         setUsagePermission(false);
+        setBorderColor('#4A948F');
     }
 
 
@@ -110,6 +114,7 @@ const GameBox = () => {
             >Start over
             </button>
         </div>
+
         </>      
     )
 }

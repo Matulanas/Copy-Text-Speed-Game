@@ -24,7 +24,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #4A948F;
+    background-color: #abc0bf;
     min-height: 100px;
 }
     .intro p {
@@ -46,7 +46,7 @@ main {
     margin: 10px;
 }
     .original-text p {
-        padding: 10px;
+        padding: 20px;
         margin: 0;
         color: #000000;
     }
@@ -92,4 +92,48 @@ textarea {
         background-color: orange;
         color: #FFFFFF;
         transition-duration: 0.3s;
+    }
+
+
+/* Tops block */
+.tops-block {
+    color: #000000;
+    width: 35%;
+    margin-top: 30px;
+}
+    .tops-title {
+        text-align: center;
+        font-weight: 900;
+        font-size: 24px;
+        text-decoration: underline;
+    }
+    .tops-list ul {
+        padding: 0;
+    }
+    .tops-list li {
+        list-style: none;
+        padding: 5px;
+        border-bottom: 1px solid #abc0bf;
+    }
+
+
+
+
+    @media (max-width: 1200px) {
+        .intro p,
+        .original-text,
+        .text-box,
+        .meta,
+        .tops-block {
+            width: 50%;
+        }
+    }
+    @media (max-width: 900px) {
+        .intro p,
+        .original-text,
+        .text-box,
+        .meta,
+        .tops-block {
+            width: 60%;
+        }
     }

@@ -1,9 +1,21 @@
 import './App.css';
 
 import GameBox from './components/GameBox';
+import Tops from './components/Tops';
 
 
 function App() {
+
+    let child = 'parent';
+
+    const handler = (value) => {
+
+        child = value;
+        console.log(child);
+        // console.log('handleris');
+    }
+    // console.log(child);
+
     return (
         <div className="App">
             <header>
@@ -17,7 +29,8 @@ function App() {
                 </p>    
             </div>
             <main>
-                <GameBox />
+                <GameBox childValue={handler}/>
+                <Tops />
             </main>
         </div>
     );
